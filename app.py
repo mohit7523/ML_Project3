@@ -81,6 +81,6 @@ def tb():
         prob = round(prob * 100, 2)
     return render_template('tb.html', pred=pred, prob=prob)
 
-
 if __name__ == "__main__":
-    app.run(process.env.port||3000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
