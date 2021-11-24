@@ -2,8 +2,8 @@ import os
 
 import numpy as np
 from PIL import Image
-#import tensorflow
-#from skimage import transform
+import tensorflow
+from skimage import transform
 
 from flask import Flask, flash, request, redirect, url_for, render_template
 from flask import request
@@ -13,7 +13,7 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 
 # Change this model path according to project structure
-MODEL_PATH = 'frontend\model\model.hdf5'
+MODEL_PATH = './model/model.hdf5'
 
 model = tensorflow.keras.models.load_model(MODEL_PATH)
 
