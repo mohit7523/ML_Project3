@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Prediction Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <style>
+        body {
+            background-color: rgb(248, 243, 197);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align="center" font-weight="bold">Tuberculosis Detection</h1>
+    {% if pred == 0 %}
+    <h3>
+        You are not suffering from Tuberculosis, but you might be suffering from COVID-19 or Pneumonia. Please visit
+        nearest hospital for treatment.
+    </h3>
+    {% endif %}
+    {% if pred == 1 %}
+    <h3>
+        Your lungs look healthy!!
+    </h3>
+    {% endif %}
+    {% if pred == 2 %}
+    <h3>
+        You are infected with Tuberculosis, please visit nearest TB hospital for treatment.
+    </h3>
+    {% endif %}
+    <h3>Prediction Probability: {{prob}}%</h3>
+</body>
+
+</html>
