@@ -7,3 +7,4 @@ scipy>=0.15.1
 keras==2.4.0
 tensorflow>=1.15
 matplotlib>=1.4.3
+Cython >= 3.0 alpha 6
